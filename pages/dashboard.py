@@ -55,6 +55,10 @@ div[data-baseweb="select"] > div {{
 st.title("🧠 AI Health Risk Dashboard")
 
 # ================= LOAD MODELS =================
+import os
+
+BASE = os.path.dirname(os.path.dirname(__file__))
+
 heart_model = pickle.load(open("heart_model.pkl", "rb"))
 diab_model = pickle.load(open("diabetes_model.pkl", "rb"))
 
